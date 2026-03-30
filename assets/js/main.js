@@ -342,7 +342,7 @@ async function tryAutoLaunchLegacyTournament() {
       return true;
     }
 
-    // RR / Thai should bounce back into the canonical Sudyam router
+    // KOTC / Thai — redirect to standalone format page
     if (requested.format === 'kotc') {
       globalThis.__legacyTournamentAutoLaunchDone = requested.tournamentId;
       const base = (typeof SITE_URL !== 'undefined' && SITE_URL) ? SITE_URL.replace(/\/$/, '') : '';
